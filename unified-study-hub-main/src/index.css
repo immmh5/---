@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+    --primary: 230 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 92%;
+    --secondary-foreground: 220 30% 15%;
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 260 60% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 230 70% 50%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 225 25% 8%;
+    --foreground: 220 20% 92%;
+    --card: 225 25% 12%;
+    --card-foreground: 220 20% 92%;
+    --popover: 225 25% 12%;
+    --popover-foreground: 220 20% 92%;
+    --primary: 230 65% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 225 20% 18%;
+    --secondary-foreground: 220 20% 90%;
+    --muted: 225 15% 16%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 260 55% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 225 15% 20%;
+    --input: 225 15% 20%;
+    --ring: 230 65% 60%;
+    --sidebar-background: 225 25% 10%;
+    --sidebar-foreground: 220 20% 90%;
+    --sidebar-primary: 230 65% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 225 15% 16%;
+    --sidebar-accent-foreground: 220 20% 90%;
+    --sidebar-border: 225 15% 18%;
+    --sidebar-ring: 230 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+  }
+}
+
+/* Physics Library Custom Styles */
+.formula-box {
+  @apply bg-primary/5 border-2 border-primary/20 rounded-xl p-4 my-4;
+}
+
+.formula-box h4 {
+  @apply text-primary font-bold mb-2;
+}
+
+.formula {
+  @apply text-lg font-bold text-center my-2 bg-primary/10 rounded-lg py-2 px-4 font-mono;
+  direction: ltr;
+}
+
+.example-box {
+  @apply bg-accent/5 border-2 border-accent/20 rounded-xl p-4 my-4;
+}
+
+.example-box h4 {
+  @apply text-accent font-bold mb-2;
+}
+
+.important-note {
+  @apply bg-destructive/5 border-2 border-destructive/20 rounded-xl p-4 my-4;
+}
+
+.important-note h4 {
+  @apply text-destructive font-bold mb-2;
+}
+
+.app-card {
+  @apply bg-card border border-border rounded-xl p-4 my-3 shadow-sm;
+}
+
+.app-card h4 {
+  @apply font-bold mb-2 text-primary;
+}
+
+.units-table {
+  @apply w-full border-collapse my-4 text-sm;
+}
+
+.units-table th {
+  @apply bg-primary/10 text-primary font-bold p-2 border border-border;
+}
+
+.units-table td {
+  @apply p-2 border border-border text-center;
+}
+
+.illustration-svg {
+  @apply w-full max-w-lg mx-auto my-6 block;
+  max-height: 300px;
+}
+
+/* Content styling */
+.lesson-content h2 {
+  @apply text-2xl font-bold mb-4 text-primary;
+}
+
+.lesson-content h3 {
+  @apply text-xl font-bold mb-3 mt-6 text-foreground;
+}
+
+.lesson-content h4 {
+  @apply text-lg font-semibold mb-2 mt-4;
+}
+
+.lesson-content p {
+  @apply mb-3 leading-relaxed text-foreground/90;
+}
+
+.lesson-content ul, .lesson-content ol {
+  @apply mb-4 pr-6 space-y-2;
+}
+
+.lesson-content li {
+  @apply leading-relaxed;
+}
+
+.lesson-content ul li {
+  list-style-type: disc;
+}
+
+.lesson-content ol li {
+  list-style-type: decimal;
+}
+
+.lesson-content strong {
+  @apply text-primary font-bold;
+}
+
+.lesson-content table {
+  direction: rtl;
+}
